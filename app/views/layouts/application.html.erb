@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= @title %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'reset' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+  <div id="header">
+    <div id="logo">
+        <%= image_tag "header_logo.png" %>
+        <%= image_tag("login_register.png", :class => "right login-register") %>
+    </div>
+    <div id="nav">
+          <div id="navigation_links">
+            <ul id="navi">
+              <li><%= link_to "New Article", :controller => "articles", :action => "new" %></li>
+              <li><%= link_to "New Category", :controller => "categories", :action => "new" %></li>
+              <li><a href="#">My Articles</a></li>
+              <li><a href="#">My Option</a></li>
+            </ul>
+          </div>
+          <div id="clouds"></div>
+    </div>
+  </div>
+    <div id="container">
+      <div id="main-content">
+        <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+
+      <%- if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <%- end -%>
+
+      <%= yield %>
+      </div>
+      <div id="sidebar">
+          sidebar here
+        <%= yield(:user) %>
+      </div>
+    </div>
+    <div class="clear">clearing div</div>
+    <div id="footer">
+      Here goes the footer
+    </div>
+  </body>
+</html>

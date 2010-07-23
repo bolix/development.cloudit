@@ -1,0 +1,9 @@
+<h1>Votes#new</h1>
+<p>Find me in app/views/votes/new.html.erb</p>
+
+<% form_for @vote do |f| %>
+    <p><%= f.text_field :value %></p>
+    <p><%= f.text_field :user_id %></p>
+    <p><%= f.text_field :article_id %></p>
+    <p><%= f.submit "create" %></p>
+<% end %>

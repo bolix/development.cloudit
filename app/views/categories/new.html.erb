@@ -1,0 +1,11 @@
+
+<h1>Make new Category</h1>
+
+<% form_for @category do |f| -%>
+
+	<%= f.label :category_name, "Category Name" %>
+	<%= f.text_field :name %>
+	
+	<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+  
+<% end -%>

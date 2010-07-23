@@ -1,0 +1,37 @@
+<% form_for @user, :url => user_path do |f| -%>
+
+   <%= error_messages_for :user %>
+<p>
+
+<%= f.text_field :login %>
+  <%= f.label :username, "Username" %>
+</p>
+
+<p>
+
+<%= f.password_field :password %>
+  <%= f.label :password, "Password" %>
+</p>
+
+<p>
+
+<%=  f.password_field :password_confirmation %>
+  <%= f.label :password_confirmation, "Password Confirmation" %>
+</p>
+
+<p>
+
+<%= f.text_field :email %>
+  <%= f.label :email, "Email" %>
+</p>
+
+<p>
+
+<%= date_select(:user, :birthday, :start_year => Time.now.year, :end_year => 1900, :order => [:month, :day, :year], :prompt => { :day => 'Day', :month => 'Month', :year => 'Year'}) %>
+  <%= f.label :birthday, "Birthday" %>
+</p>
+
+    <p class="submit">
+<%= f.submit "Create", :disable_with => 'Createing...' %>
+    </p> 
+<% end -%>

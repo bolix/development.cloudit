@@ -1,0 +1,36 @@
+
+	<h1> 
+		<%= label :title, "Title:" %>
+	 	<%= @article.title %> 
+
+	</h1>
+	<p>
+		<%= label :article_url, "Article Url:" %>
+		<%= link_to @article.url, @article.url %>
+	
+	</p>
+	<p> 
+		<%= label :description, "Description:" %>
+		<%= @article.description %> 
+	
+	</p>
+	<h2>
+		<%= label :article_type, "Article Type:" %>
+		 <%= @article.article_type %> 
+		
+	</h2>
+	<h2> 
+		<%= label :article_category, "Article Category:" %>
+		<%= @article.category %> 
+	
+	</h2>
+	<h2> 
+		<%= label :posted_by, "Posted by:" %>
+		<%= @article.user.login %>
+	</h2>
+
+    <div>
+      
+    </div>
+
+    <%= render :partial => "new_vote", :locals => {:vote => Vote.new(:article_id => @article.id) } %>

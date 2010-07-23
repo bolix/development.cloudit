@@ -1,0 +1,7 @@
+<% title 'Login' %>
+
+<p>Index for not-logged in ppl</p>
+
+<%= link_to "Need an user?", :controller => 'users', :action => 'new'  %>
+
+<%= link_to 'Login', new_user_session_path, :id => "login-link" %>

@@ -1,0 +1,356 @@
+/*
+Author:  Josue Abreu
+Project: Cloud-It!
+Date: June 20th 2010
+*/
+
+
+/*
+# CSS contents ###################
+* 2 Layout
+* 3 Nav
+* 4 Headings
+* 5 Lists
+* 6 Images
+* 7 Links
+* 8 Forms
+* 9 Tables
+* 10 Typography
+* 11 Other
+*/
+
+
+/*
+# Colour reference ###################
+
+
+*/
+
+/*
+# Reset defaults ###################
+*/
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td { margin: 0; padding: 0; } /* Reset margins and padding */
+
+a:link, a:visited{text-decoration:none;outline:none;} /* Reset link styles */
+
+html {overflow: -moz-scrollbars-vertical;} /* Mozilla scrollbar fix */
+
+#skipto{position:absolute;left:-9999px;top:-9999px;} /* Hides the skip to link - useful for screen readers */
+
+.group:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;} /* Automatically clears after any element with this class */
+
+/*
+# Layout ###################
+*/
+
+body{font:75%/1.5  "Helvetica Neue", Helvetica, Arial, sans-serif; background: #cee5f0;}
+
+/*
+# Nav ###################
+*/
+
+ul#navi {
+      height:69px;
+      padding-top:22px;
+      margin:0 auto;
+      width:900px;
+  }
+
+  ul#navi li {
+      text-align:center;
+      display:block;
+      background: transparent url(../images/cloud.png) no-repeat center top;
+      height:69px;
+      width:100px;
+      float:left;
+      margin-left:40px;
+      padding-top:25px;
+
+  }
+
+    ul#navi li a {
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+
+    }
+
+    ul#navi li a:link {color: #abd8ef;text-decoration: none}
+    ul#navi li a:visited {color: #abd8ef;}
+    ul#navi li a:hover,a:focus {color: #284259;text-decoration: none;}
+    ul#navi li a:active {color: #284259}
+
+/*
+# Headings ###################
+*/
+
+h1{}
+
+h2{}
+
+h3{}
+
+h4{}
+
+
+
+/*
+# Lists ###################
+*/
+
+
+
+/*
+# Images ###################
+*/
+
+img{border:none;}
+img.left{margin:0 10px 10px 0;}
+img.right{margin:0 0 10px 10px;}
+
+/*
+# Links ###################
+*/
+
+a{}
+a:hover{}
+
+/*
+# Forms ###################
+*/
+    input, textarea {
+        padding: 9px;
+        border: solid 1px #7ac2e6;
+        outline: 0;
+        font: normal 13px/100% Verdana, Tahoma, sans-serif;
+        width: 200px;
+        background: #FFFFFF;
+        background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #eaf8ff), to(#FFFFFF));
+	    background: -moz-linear-gradient(top, #FFFFFF, #eaf8ff 1px, #FFFFFF 25px);
+        }
+
+    textarea {
+        width: 400px;
+        max-width: 400px;
+        height: 150px;
+        line-height: 150%;
+        }
+
+    input:hover, textarea:hover,
+    input:focus, textarea:focus {
+        border-color: #C9C9C9;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;  
+        }
+
+    label {
+        margin-left: 10px;
+        color: #284964;
+        }
+
+    .submit input {
+        width: auto;
+        padding: 9px 15px;
+        background: #617798;
+        border: 0;
+        font-size: 14px;
+        color: #FFFFFF;
+        -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+        }
+
+    input, textarea {
+            box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+            -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+            -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+        }
+
+
+
+/*
+# Tables ###################
+*/
+
+
+
+/*
+# Typography ###################
+*/
+
+p{margin:10px 0 1.5em; line-height:20px;}
+
+/*
+# Other ###################
+*/
+
+.right{float:right;}
+.left{float:left;}
+.clear{clear:both;}
+.alignleft{text-align: left;}
+.alignright{text-align: right;}
+.aligncenter{text-align: center;}
+
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+    width:960px;
+    margin:0 auto;
+
+}
+
+#main-content {
+  width: 560px;
+  float:left;
+  background-color: #e4f1f7;
+  padding: 20px 40px;
+  border: solid 5px #add3e8;
+  margin-top: -200px;
+  min-height:400px;
+}
+
+#sidebar {
+    width:200px;
+    float:right;
+    background-color:white;
+    min-height:300px;
+    margin-top: -200px;
+    padding: 20px 40px;
+    border: solid 5px #add3e8;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+
+#logo {
+    background: #7ac2e6 url("../images/logo_bg.jpg") repeat-x;
+    height:124px;
+    border-bottom:1px solid white;
+}
+
+#logo img {
+    margin-top:50px;
+}
+
+#nav {
+    background: #abd8ef url("../images/nav_bg.jpg") repeat-x;
+    height: 293px;
+    border-bottom:3px solid #d4e5ee;
+}
+
+#clouds {
+    background: url("../images/clouds.jpg") repeat-x;
+    height: 121px;
+    margin-top:161px;
+}
+
+
+#footer {
+    margin-top:50px;
+    background:#cee5f0;
+}
+
+#navigation_links {
+    /*text-indent:-9999px;*/
+}
+
+
+
+.article {
+     line-height:25px;
+     border-bottom:1px solid #abd8ef;
+     margin: 5px 5px 5px 5px;
+}
+
+.article a {
+    color: #558da9;
+}
+
+#new_article p {
+    margin:10px 10px 10px 10px;
+}
+
+#login {
+    background: transparent url(../images/login_cloud.png) center top;
+    width:669px;
+    height:484px;
+    margin:0 auto;
+    margin-top:-260px;
+}
+
+#login h1 {
+          font-size:24px
+}
+
+#login p {
+     line-height:70px;
+}
+
+.login-pushed {
+    padding-top:150px;
+    padding-right:50px;
+}
+
+.login-register {
+   padding-right:20px; 
+}

@@ -1,0 +1,10 @@
+<h1 id="categories_index">Categories Index</h1>
+
+<% for category in @category %>
+
+<p>
+	<%= category.name %> <br/>
+		<a href="/categories/delete/<%= category.id %>">Delete</a>
+</p>
+
+<% end %>

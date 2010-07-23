@@ -1,0 +1,25 @@
+<% title 'Welcome to Cloud-It!' %>
+
+<h2>Hello <%=h @user.login %></h2>
+
+<%= image_tag @user.gravatar_url %>
+
+	<% for article in @articles %>
+
+	<p>
+		<a href="/articles/<%= article.id %>"><%= article.title %></a>
+		Category: <%= article.category %>
+		<% if article.user_id == current_user.id %>
+		<a href="/articles/delete/<%= article.id %>">Delete</a>
+		<% end %>
+	</p>
+	
+	
+	<% end %>
+
+
+<%= link_to "New Article?", :controller => "articles", :action => "new" %>
+
+
+
+<%= link_to 'Logout', user_session_path, :method => :delete %>

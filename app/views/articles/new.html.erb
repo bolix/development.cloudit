@@ -1,0 +1,42 @@
+<% form_for @article do |f| -%>
+<div id="new_article">
+      <%= error_messages_for 'article' %>
+
+<p class="article_category">
+  <%= collection_select :article, :category_id, @categories, :id, :name %>
+  <%= f.label :category_id, "Category" %>
+</p>
+
+<p class="article_title">
+	<%= f.text_field :title %>
+    <%= f.label :title, "Title" %>
+</p>
+
+<p class="article_url">
+	<%= f.text_field :url	 %>
+    <%= f.label :url, "Url" %>
+</p>
+
+<p class="article_description">
+	<%= f.text_area :description %>
+    <%= f.label :description, "Description" %>
+</p>
+
+<p class="article_upload">
+
+	  <%= f.text_field :pic_url %>
+  <%= f.label :picture_url, "Picture Url" %>
+
+</p>
+
+<p class="article_type">
+	<%= f.text_field :article_type %>
+    <%= f.label :type, "Tags" %>
+</p>
+
+<p class="submit">
+    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+</p>
+
+</div> 
+<% end -%>

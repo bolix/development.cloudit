@@ -1,0 +1,15 @@
+<h1>Please submit a vote! </h1>
+<% form_for(vote) do |f| %>
+
+    <%= error_messages_for :vote %>
+    
+    <p><%= f.hidden_field :article_id %></p>
+    <p>
+      <%= f.label :value, "Value for the vote: "%>
+      <%= f.select :value, {"1" => "1","2" => "2","3" => "3","4" => "4", "5" => "5"} %>
+    </p>
+    <p>
+       <%= f.submit "Cloud-it!" %>
+    </p>
+
+<% end %>
