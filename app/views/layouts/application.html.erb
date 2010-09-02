@@ -10,8 +10,23 @@
   <body>
   <div id="header">
     <div id="logo">
-        <%= image_tag "header_logo.png" %>
-        <%= image_tag("login_register.png", :class => "right login-register") %>
+      <div class="container">
+       <div class="main-logo">
+        <%= link_to 'Home', root_path, :class => 'home' %>
+       </div>
+        <div class="login-register">
+            <ul id="log-reg">
+              <% unless current_user %>
+              <li><%= link_to "Register", :controller => "users", :action => "new" %></li>
+              <li><%= link_to "Log In", :controller => "user_sessions", :action => "new" %></li>
+              <% else %>
+               <li><%= link_to current_user.login, :controller => "Users", :action => "edit" %></li>
+               <li><%= link_to 'Logout', '/logout' %></li>
+              <% end %>
+
+            </ul>
+        </div>
+      </div>
     </div>
     <div id="nav">
           <div id="navigation_links">
@@ -22,7 +37,8 @@
               <li><a href="#">My Option</a></li>
             </ul>
           </div>
-          <div id="clouds"></div>
+          <div id="clouds">
+          </div>
     </div>
   </div>
     <div id="container">

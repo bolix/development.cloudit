@@ -6,16 +6,14 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
-  
 
   def create
     @category = Category.new(params[:category])
     if @category.save
       flash[:notice] = "Your category as been created!"
-      redirect_to "http://0.0.0.0:3000/categories"
+      redirect_to root_path
     else
-      redirect_to "http://0.0.0.0:3000/categories"
-
+      redirect_to root_path
     end
   end
 
@@ -23,11 +21,10 @@ class CategoriesController < ApplicationController
    @category =  Category.find(params[:id])
    if @category.destroy
      flash[:notice] = "Category deleted sucessfully"
-     redirect_to "http://0.0.0.0:3000/categories"
+     redirect_to root_path
    else
      flash[:notice] = "Category could not be deleted"
-     redirect_to "http://0.0.0.0:3000/categories"
-
+     redirect_to root_path
    end
   end
 

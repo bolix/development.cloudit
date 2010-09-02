@@ -1,0 +1,27 @@
+<h1>Welcome, <%= @user.login %></h1>
+
+<h2>You currently have <%= @user.votes.count %> votes</h2>
+
+<% form_for(@user, :url => {:action => 'update'}) do |f| -%>
+
+   <%= error_messages_for :user %>
+
+
+<p>
+    <%= f.label :first_name, "First Name: "%>
+    <%= f.text_field :first_name %>
+</p>
+
+<p>
+    <%= f.label :last_name, "Last Name: " %>
+    <%= f.text_field :last_name %>
+</p>
+<p>
+    <%= f.label :description, "Description: " %>
+    <%= f.text_area :description %>
+</p>
+<p class="submit">
+    <%= f.submit "Update", :disable_with => 'Updating...' %>
+</p>
+
+<% end -%>

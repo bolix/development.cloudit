@@ -1,5 +1,6 @@
 <h1 id="categories_index">Categories Index</h1>
 
+
 <% for category in @category %>
 
 <p>
@@ -8,3 +9,5 @@
 </p>
 
 <% end %>
+
+<%= render :partial => "new", :locals => {:category => Category.new} %>

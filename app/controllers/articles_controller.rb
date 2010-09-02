@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :login_required, :only => [:index, :new]
+  before_filter :login_required, :only => [:new]
 
   def index
    @user = current_user

@@ -22,8 +22,6 @@ Date: June 20th 2010
 
 /*
 # Colour reference ###################
-
-
 */
 
 /*
@@ -49,6 +47,34 @@ body{font:75%/1.5  "Helvetica Neue", Helvetica, Arial, sans-serif; background: #
 /*
 # Nav ###################
 */
+
+ul#log-reg {
+    padding-top:55px;
+
+}
+
+ul#log-reg li {
+      text-align:center;
+      display:block;
+      height:69px;
+      width:100px;
+      float:left;
+      margin-left:50px;
+      padding-top:25px;
+
+}
+
+ul#log-reg li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+ul#log-reg li a:link {color: #abd8ef;text-decoration: none}
+ul#log-reg li a:visited {color: #abd8ef;}
+ul#log-reg li a:hover,a:focus {color: #284259;text-decoration: none;}
+ul#log-reg li a:active {color: #284259}
 
 ul#navi {
       height:69px;
@@ -90,11 +116,11 @@ ul#navi {
 # Headings ###################
 */
 
-h1{}
+h1{padding:9px; font-size:21px;}
 
-h2{}
+h2{padding:5px; font-size:18px;}
 
-h3{}
+h3{padding:3px; font-size:14px;}
 
 h4{}
 
@@ -121,6 +147,13 @@ img.right{margin:0 0 10px 10px;}
 a{}
 a:hover{}
 
+
+.home {
+    display:block;
+    text-indent:-9999px;
+    height:85px;
+}
+
 /*
 # Forms ###################
 */
@@ -133,6 +166,8 @@ a:hover{}
         background: #FFFFFF;
         background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #eaf8ff), to(#FFFFFF));
 	    background: -moz-linear-gradient(top, #FFFFFF, #eaf8ff 1px, #FFFFFF 25px);
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
         }
 
     textarea {
@@ -140,6 +175,8 @@ a:hover{}
         max-width: 400px;
         height: 150px;
         line-height: 150%;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
         }
 
     input:hover, textarea:hover,
@@ -170,6 +207,18 @@ a:hover{}
             -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
         }
 
+    select {
+        padding:9px;
+        border: solid 1px #7ac2e6;
+        outline: 0;
+        font: normal 13px/100% Verdana, Tahoma, sans-serif;
+        width: 160px;
+        background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #eaf8ff), to(#FFFFFF));
+	    background: -moz-linear-gradient(top, #FFFFFF, #eaf8ff 1px, #FFFFFF 25px);
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+    }
+
 
 
 /*
@@ -183,6 +232,8 @@ a:hover{}
 */
 
 p{margin:10px 0 1.5em; line-height:20px;}
+
+
 
 /*
 # Other ###################
@@ -351,6 +402,22 @@ p{margin:10px 0 1.5em; line-height:20px;}
     padding-right:50px;
 }
 
+.main-logo {
+    background: url(../images/header_logo.png) no-repeat;
+    width: 504px;
+    height:104px;
+    float:left;
+    margin-top:50px;
+}
+
 .login-register {
-   padding-right:20px; 
+   background: url(../images/login_register.png) no-repeat;
+   width:333px;
+   height:159px;
+   float:right;
+}
+
+.container {
+    width:960px;
+    margin:0 auto;
 }
