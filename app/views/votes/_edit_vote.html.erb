@@ -1,0 +1,20 @@
+<h1>You have already voted on this article, would you like to change your vote?</h1>
+
+<%= debug @vote %>
+<%# @vote.created_at %>
+
+
+<%# form_for(@vote, :url => {:controller => 'votes', :action => 'edit'}) do |f| %>
+
+    <%# error_messages_for :vote %>
+
+    <p><%# f.hidden_field :article_id %></p>
+    <p>
+      <%# f.label :value, "Value for the vote: "%>
+      <%# f.select :value, {"1" => "1","2" => "2","3" => "3","4" => "4", "5" => "5"}, :selected => vote.value %>
+    </p>
+    <p>
+       <%# f.submit "Cloud-it!" %>
+    </p>
+
+<%# end %>

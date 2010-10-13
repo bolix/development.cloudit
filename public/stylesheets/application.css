@@ -109,7 +109,7 @@ ul#navi {
 
     ul#navi li a:link {color: #abd8ef;text-decoration: none}
     ul#navi li a:visited {color: #abd8ef;}
-    ul#navi li a:hover,a:focus {color: #284259;text-decoration: none;}
+    ul#navi li a:hover,a:focus {color: #284259;text-decoration: underline;}
     ul#navi li a:active {color: #284259}
 
 /*
@@ -265,7 +265,7 @@ p{margin:10px 0 1.5em; line-height:20px;}
   background-color: #e4f1f7;
   padding: 20px 40px;
   border: solid 5px #add3e8;
-  margin-top: -200px;
+  margin-top: -180px;
   min-height:400px;
 }
 

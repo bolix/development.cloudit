@@ -1,0 +1,7 @@
+      <div id="comment_<%= comments.id %>">
+        <h2><%= comments.user.login %> <%= comments.date %></h2>
+
+        <p><%= comments.comment %></p>
+
+        <p><%= image_tag comments.user.gravatar_url %></p>
+      </div>

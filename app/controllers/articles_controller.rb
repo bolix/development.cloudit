@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @title = "Cloud-it! |#{@article.title}"
+    @user = current_user
   end
 
   def new
@@ -22,7 +23,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     @article.user_id = current_user.id
    if @article.save
-    flash[:notice] = "Article Submitted Sucessfully"
+    flash[:notice] = "Article Submitted Successfully"
      redirect_to :controller => :articles, :action => :index
    else
      render :controller => "articles", :action => 'new'
@@ -32,7 +33,7 @@ class ArticlesController < ApplicationController
   def delete
     @article = Article.find(params[:id])
 	if @article.destroy
-      flash[:notice] = "Article Deleted Sucessfully"
+      flash[:notice] = "Article Deleted Successfully"
       redirect_to :controller => :articles, :action => :index
     else
       redirect_to :controller => :articles, :action => :index

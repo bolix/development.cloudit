@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resource :user_session, :only => [:new, :create, :destroy]
   map.resource :user
+  map.resource :comments
   map.resources :articles, :has_many => :votes
   map.resources :categories
   map.resources :votes

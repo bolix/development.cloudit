@@ -1,0 +1,7 @@
+
+page.insert_html :bottom, :comments, :partial => 'comments', :object => @comment
+page[@comment].visual_effect :highlight, :startcolor => "#ffffff", :endcolor => "#e4f1f7"
+page[:newcmts].reset
+
+#page.replace_html :notice, flash[:notice]
+#flash.discard
