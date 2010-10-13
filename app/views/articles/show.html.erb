@@ -34,11 +34,8 @@
     </div>
     <% if current_user  %>
         <% if @user.voted_on_article?(@article) %>
-            <%# vote_id = current_user.votes.find_by_article(@article) %>
-            <%# @vote.value %>
-            <%= @vote = current_user.votes.find_by_article(@article)%>
-            <%= debug @vote %>
-            <%# render :partial => "votes/edit_vote", :locals => {:vote => @vote} %>
+            <% @vote = current_user.votes.find_by_article_id(@article)%>
+            <%= render :partial => "votes/edit_vote", :locals => {:vote => @vote} %>
         <% else %>
             <div class="vote">
              <%= render :partial => "votes/new_vote", :locals => {:vote => Vote.new(:article_id => @article.id) } %>

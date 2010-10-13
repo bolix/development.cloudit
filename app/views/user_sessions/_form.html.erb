@@ -5,17 +5,21 @@
     <div class="login-pushed">
 
     <h1 class="aligncenter"><%= f.label :login, "Username" %></h1>
+
     <p class="aligncenter">
       <%= f.text_field :login %>
     </p>
 
     <h1 class="aligncenter"><%= f.label :password, "Password" %></h1>
-    <p class="aligncenter">
+
+      <p class="aligncenter">
     <%= f.password_field :password %>
     </p>
-	<p class="submit aligncenter">
-	<%= f.submit "Login", :disable_with => 'Logging...' %>
+
+    <p class="submit aligncenter">
+	    <%= f.submit "Login", :disable_with => 'Logging...' %>
     </p>
 
     </div>
+
 <% end -%>

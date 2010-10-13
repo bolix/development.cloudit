@@ -5,6 +5,11 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(params[:vote])
+#    if current_user.votes.count.equal?(0)
+#      @user_rating = UserCategoryRating.new
+#    else
+#      @user_rating = UserCategoryRating.find_all_by_user_id(current_user)
+#    end
     #@user_rating = UserCategoryRating.new
     @vote.user_id = current_user.id
 
@@ -28,8 +33,13 @@ class VotesController < ApplicationController
   end
 
   def update
-     if @vote.update_attributes(params[:user])
-      redirect_to root_path
+    @vote = Vote.find(params[:id])
+
+     if @vote.update_attributes(params[:vote])
+       flash[:notice] = "Your vote has been updated!" 
+      redirect_to article_path(@vote.article)
+     else
+      redirect_to article_path(@vote.article)
     end
   end
 
